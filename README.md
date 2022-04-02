@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/graficdoctor/fe-23-interactive-rating-component-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Vercel](https://fe-23-interactive-rating-component-main.vercel.app/)
 
 ## My process
 
@@ -59,6 +59,21 @@ The rating-buttons got squeezed on small screenwidths. To solve this, I added a 
 ```
 
 I mainly learned how to find list items that have been clicked. Plus how to select elements by `tagName` in Javascript. I used the links below to help me find my solution.
+
+```js
+const selectedRatingBtn = document.getElementsByTagName('li');
+
+function selectedRating() {
+  const selectedRate = document.getElementById('selectedrating');
+  for (let i = 0; i < selectedRatingBtn.length; i++) {
+    let html = '';
+    selectedRatingBtn[i].addEventListener('click', function (event) {
+      html = event.target.innerText;
+      selectedRate.innerText = html;
+    });
+  }
+}
+```
 
 ### Useful resources
 
