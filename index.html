@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body class="grid">
+    <!-- Rating state start -->
+    <div class="rating-modal flex column active" id="giverating">
+      <img src="/images/icon-star.svg" alt="star" class="star" />
+      <h1>How did we do?</h1>
+      <p>
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <div id="wrap">
+        <ul class="rating-buttons flex row">
+          <li class="btn rating-btn" id="button1">1</button>
+          <li class="btn rating-btn" id="button2">2</button>
+          <li class="btn rating-btn" id="button3">3</button>
+          <li class="btn rating-btn" id="button4">4</button>
+          <li class="btn rating-btn" id="button5">5</button>
+        </ul>
+      </div>
+      <button class="btn submit-btn" id="submitbtn">submit</button>
+    </div>
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div class="rating-modal rated flex column column-center not-active" id="ratinggiven">
+      <img src="/images/illustration-thank-you.svg" alt="" />
+      <div class="selected-rating">
+        You selected <span id="selectedrating">4</span> out of 5
+      </div>
+      <h1>Thank you!</h1>
+      <p>
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
+    </div>
+
+    <!-- Thank you state end -->
+  </body>
+</html>
